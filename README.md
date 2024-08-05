@@ -1,7 +1,8 @@
 # Honeypot Project
 
-A simple honeypot implementation to capture and monitor malicious activity. This project uses Flask to create a vulnerable web application and sets up an SSH service for attackers to interact with. It includes logging and monitoring scripts to track and analyze the activity.  
-_Project Ongoing...⌛_
+A simple honeypot implementation to capture and monitor malicious activity. This project uses Flask to create a vulnerable web application and sets up an SSH service for attackers to interact with. It includes logging and monitoring scripts to track and analyze the activity.
+
+# _Project Ongoing...⌛_
 
 ## Table of Contents
 

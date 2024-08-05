@@ -1,8 +1,3 @@
-# Vulnerable HoneyPot
-# Author: Sethu Satheesh
-# Created: 5/08/2024
-# Modified: 5/08/2024
-
 from flask import Flask, request
 import subprocess
 import logging

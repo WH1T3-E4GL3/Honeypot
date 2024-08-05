@@ -1,8 +1,3 @@
-# HoneyPot Monitor
-# Author: Sethu Satheesh
-# Created: 5/08/2024
-# Modified: 5/08/2024
-
 import time
 import re
 

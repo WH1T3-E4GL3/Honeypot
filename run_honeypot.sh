@@ -1,10 +1,9 @@
+#!/bin/bash
+
 # HoneyPot Implementation
 # Author: Sethu Satheesh
 # Created: 5/08/2024
 # Modified: 5/08/2024
-
-
-#!/bin/bash
 
 # Start Flask app and redirect output to a log file
 echo "Starting Flask app..."

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Admin{% endblock %}</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        h1 {
+            color: #0056b3;
+        }
+    
+        .container {
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            /* background: #fff; */
+            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+            /* max-width: 400px; General container width */
+            /* width: 100%; */
+        }
+    
+        button, .btn {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+        form {
+            margin-top: 20px;
+        }
+    
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        .error {
+            color: red;
+            font-size: small;
+        }
+    
+        .success {
+            color: green;
+            font-size: small;
+        }
+       
+
+        /* Admin Dashboard Styles */
+        .admin-dashboard {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 32px;
+            color: #333;
+            margin: 0;
+        }
+
+        .logout-button {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+
+        .dashboard-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .dashboard-sidebar {
+            width: 250px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-sidebar h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #0056b3;
+        }
+
+        .dashboard-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dashboard-sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .dashboard-sidebar ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dashboard-sidebar ul li a:hover {
+            background-color: #e9ecef;
+            color: #0056b3;
+        }
+
+        .dashboard-content {
+            flex: 1;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-content h2 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .action-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-card h3 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+
+        .action-card p {
+            color: #666;
+        }
+
+        .action-card:hover {
+            background-color: #f7f7f7;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="admin-dashboard">
+        <header class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <a href="{{ url_for('logout') }}"><button class="logout-button">Logout</button></a>
+        </header>
+
+        <div class="dashboard-container">
+            <aside class="dashboard-sidebar">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="{{ url_for('admin') }}">Dashboard Overview</a></li>
+                    <li><a href="{{ url_for('vulnerable', cmd='ls') }}">List Files</a></li>
+                    <li><a href="{{ url_for('vulnerable', cmd='whoami') }}">Who Am I</a></li>
+                    <li><a href="{{ url_for('vulnerable', cmd='df -h') }}">Disk Usage</a></li>
+                    <!-- Add more navigation links here -->
+                </ul>
+            </aside>
+
+            <main class="dashboard-content">
+                <h2>Admin Actions</h2>
+                <div class="actions">
+                    <a href="{{ url_for('vulnerable', cmd='ls') }}" class="action-card-link">
+                        <div class="action-card">
+                            <h3>List Files</h3>
+                            <p>View the files on the server.</p>
+                        </div>
+                    </a>
+                    <a href="{{ url_for('vulnerable', cmd='whoami') }}" class="action-card-link">
+                        <div class="action-card">
+                            <h3>Who Am I</h3>
+                            <p>Check the current user identity.</p>
+                        </div>
+                    </a>
+                    <a href="{{ url_for('vulnerable', cmd='df -h') }}" class="action-card-link">
+                        <div class="action-card">
+                            <h3>Disk Usage</h3>
+                            <p>Check disk usage statistics.</p>
+                        </div>
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock %}

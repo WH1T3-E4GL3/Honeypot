@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Command Output</h1>
+    <pre>{{ output }}</pre>
+    <a href="{{ url_for('admin') }}"><button>Back to Admin Dashboard</button></a>
+{% endblock %}

@@ -45,9 +45,14 @@ def print_table_header(column_widths):
     separator_row = ""
     for column, width in column_widths.items():
         header_row += f"{column:<{width}} | "
-        # separator_row += "=" * (width - 1) + "-+-"
     print(header_row[:-3])  # Remove trailing ' | '
     print(separator_row[:-3])
+
+def colorize_output(output_line, status):
+    """Colorizes the output line based on status code."""
+    if status == '404':
+        return f"\033[93m{output_line}\033[0m"  # Yellow for 404
+    return output_line
 
 def monitor_log_file(logfile):
     """Monitors the log file and prints new entries in a table format."""
@@ -74,7 +79,11 @@ def monitor_log_file(logfile):
             for column in column_names:
                 value = locals().get(column.lower().replace(" ", "_"))
                 output_line += f"{str(value) if value else '':<{column_widths[column]}} | "
-            print(output_line[:-3])  # Remove trailing ' | '
+            output_line = output_line[:-3]  # Remove trailing ' | '
+
+            # Colorize based on status
+            output_line = colorize_output(output_line, status)
+            print(output_line)
 
 if __name__ == "__main__":
     # Path to your honeypot log file

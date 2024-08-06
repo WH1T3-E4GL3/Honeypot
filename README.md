@@ -76,8 +76,11 @@ A simple honeypot implementation to capture and monitor malicious activity. This
 2. **Monitor logs in real-time:**
 
     ```bash
-    tail -f /var/log/auth.log  # For SSH logs
-    tail -f /var/log/honeypot.log  # For Flask app logs
+    >> tail -f /var/log/auth.log  # For SSH logs
+    or
+    >> sudo journalctl -u ssh -f (if above command for ssh not works)
+    
+    >> tail -f /var/log/honeypot.log  # For Flask app logs
     ```
 
 ## Usage

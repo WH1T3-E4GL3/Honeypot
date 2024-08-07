@@ -26,8 +26,8 @@ A simple honeypot implementation to capture and monitor malicious activity. This
    
    Create a new user on your system for making that account as the Honeypot.
    
-             sudo useradd -m -s /bin/bash vulnerableuser # change vulnerable user to your desired username
-             sudo passwd vulnerableuser  # Set a weak password like 'password123 or admin or root'
+      sudo useradd -m -s /bin/bash vulnerableuser # change vulnerable user to your desired username
+      sudo passwd vulnerableuser  # Set a weak password like 'password123 or admin or root'
    
 
 

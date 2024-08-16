@@ -3,7 +3,8 @@
 # HoneyPot Implementation
 # Author: Sethu Satheesh
 # Created: 5/08/2024
-# Modified: 6/08/2024
+# Modified: 16/08/2024
+
 
 echo """
   _    _                          _____      _   
@@ -17,7 +18,7 @@ echo """
 """
 
 # Check if necessary commands are available
-for cmd in python nohup service curl date; do
+for cmd in python nohup systemctl curl date; do
     if ! command -v $cmd &> /dev/null; then
         echo >&2 "[$(date +'%b %d %H:%M:%S')] $(hostname) [ERROR] Command '$cmd' is required but not installed. Aborting."
         exit 1
@@ -38,7 +39,7 @@ log "[INFO] Flask app started with process ID: $FLASK_PID"
 
 # Start SSH service
 log "[INFO] Starting SSH service..."
-sudo service ssh start
+sudo systemctl start ssh
 
 # Check if Flask is running
 sleep 2  # Give some time for Flask to start
@@ -53,7 +54,7 @@ else
 fi
 
 # Check SSH service status
-SSH_STATUS=$(sudo service ssh status | grep -c 'running')
+SSH_STATUS=$(sudo systemctl status ssh | grep -c 'running')
 if [ $SSH_STATUS -gt 0 ]; then
     log "[SUCCESS] SSH service is running on port 22."
 else

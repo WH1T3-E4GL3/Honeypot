@@ -79,6 +79,7 @@ A simple honeypot implementation to capture and monitor malicious activity. This
 1. **Run the Flask application and SSH service:**
 
     ```bash
+    sudo su
     ./run_honeypot.sh
     ```
 

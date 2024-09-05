@@ -1,7 +1,7 @@
 # Honeypot Project
 
 <a href="https://visitcount.itsvg.in">
-  <img src="https://visitcount.itsvg.in/api?id=CrimeFlare&label=Visitors&color=6&icon=5&pretty=true" />
+  <img src="https://visitcount.itsvg.in/api?id=Honeypot&label=Visitors&color=6&icon=5&pretty=true" />
 </a>
 
 

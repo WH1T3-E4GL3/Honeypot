@@ -1,8 +1,6 @@
 # Honeypot Project
 
-<a href="https://visitcount.itsvg.in">
-  <img src="https://visitcount.itsvg.in/api?id=Honeypot&label=Visitors&color=6&icon=5&pretty=true" />
-</a>
+[![](https://visitcount.itsvg.in/api?id=WH1T3-E4GL3&label=Repo%20Views%20Count&color=0&icon=5&pretty=false)](https://visitcount.itsvg.in)
 
 
 A simple honeypot implementation to capture and monitor malicious activity. This project uses Flask to create a vulnerable web application and sets up an SSH service for attackers to interact with. It includes logging and monitoring scripts to track and analyze the activity.

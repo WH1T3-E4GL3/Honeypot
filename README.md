@@ -1,6 +1,6 @@
 # Honeypot Project
 
-[![](https://visitcount.itsvg.in/api?id=WH1T3-E4GL3&label=Repo%20Views%20Count&color=0&icon=5&pretty=false)](https://visitcount.itsvg.in) [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/whxitte)
+[![](https://visitcount.itsvg.in/api?id=whxitte&label=Repo%20Views%20Count&color=0&icon=5&pretty=false)](https://visitcount.itsvg.in) [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/whxitte)
 
 
 
@@ -43,7 +43,7 @@ A simple honeypot implementation to capture and monitor malicious activity. This
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/WH1T3-E4GL3/Honeypot.git
+    git clone https://github.com/whxitte/Honeypot.git
     cd Honeypot
     ```
 
